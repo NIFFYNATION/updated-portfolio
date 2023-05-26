@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import {Alert, Row, Col} from "react-bootstrap";
+import {Row, Col} from "react-bootstrap";
+import contactImg from "../assets/img/contact.jpg";
+
 
 const Newsletter = () => {
   const [formData, setFormData] = useState({
@@ -36,16 +38,21 @@ const Newsletter = () => {
     <>
     <Row className="newsletter-bx">
         <Col lg={6} md={6} xl={5}>
-        <h3>Subscribe to our Newsletter</h3>
+        <h3>Get in touch</h3>
+        <img src={contactImg} alt="Contact Img" style={{width: "400px", marginTop: "1em", borderRadius: "5px"}}/>
+       
         </Col>
+        {/* <Col xs={12} md={6} xl={5} mt={5}>
+            
+         </Col>  */}
         <Col lg={6} md={6} xl={7}>
           <div >
             <form onSubmit={handleSubmit}>
-            {formStatus === 'success' && <p>Success! Your form has been submitted.</p>}
-            {formStatus === 'error' && <p>Error! Please fill in all the fields.</p>}
+            {formStatus === 'success' && <p className="success">Success! Your form has been submitted.</p>}
+            {formStatus === 'error' && <p className="danger">Error! Please fill in all the fields.</p>}
+           
             <div className="new-email-bx">
             <div>
-              {/* <label htmlFor="name">Name:</label> */}
               <input
                 placeholder="Name"
                 type="text"
@@ -55,8 +62,8 @@ const Newsletter = () => {
                 onChange={handleChange}
               />
             </div>
+
             <div>
-              {/* <label htmlFor="email">Email:</label> */}
               <input
                 placeholder="Email"
                 type="email"
@@ -65,19 +72,23 @@ const Newsletter = () => {
                 value={formData.email}
                 onChange={handleChange}
               />
-            </div>
-            <div>
-              {/* <label htmlFor="message">Message:</label> */}
               <textarea 
                 placeholder="Message"
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                row="5"
               />
             </div>
-            <button type="submit">Submit</button>
+
+            <div>
+              
+
             </div>
+            </div>
+            <button type="submit">Submit</button>
+
             </form>
           </div>
         </Col>

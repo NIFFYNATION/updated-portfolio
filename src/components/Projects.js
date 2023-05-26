@@ -1,16 +1,18 @@
-import React from 'react';
-import { Container, Row, Col, Nav, Tab, TabPane} from "react-bootstrap";
-import colorSharp2 from "../assets/img/giphy.gif";
+import React, { useState } from 'react';
+import {Container, Col, Row, Tab, Tabs } from 'react-bootstrap';
 import project1 from "../assets/img/project1.jpg";   
 import project2 from "../assets/img/project2.jpg";   
 import project3 from "../assets/img/project3.jpg";   
 import { ProjectCard } from './ProjectCard';
 import TrackVisibility from 'react-on-screen';
 
+const TabPane = () => {
+  const [activeTab, setActiveTab] = useState('tab1');
 
-function Projects (){
-
-  const projects = [
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
+    const projects = [
       {
         title: "Business Startup",
         description: "Design & Development", 
@@ -43,13 +45,12 @@ function Projects (){
       },
     ]
 
-  return(
-      <section className="project" id="project">
-        <Container>
+  return (
+    <section>
+           <Container>
           <Row>
             <Col>
-         
-              <TrackVisibility>
+              <TrackVisibility className="project">
                 {({ isVisible }) => (
                   <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                     <h2>Projects</h2>
@@ -57,41 +58,34 @@ function Projects (){
                   </div>
                 )}
               </TrackVisibility>
-            <Tab.Container id="projects-tabs" defaultActiveKey="first">
-            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-            <Nav.Item>
-              <Nav.Link  eventKey="first">Tab One</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="second">Tab Two</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="third">
-               Tab Three
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
-          <Tab.Content>
-            <Tab.Pane eventKey="first">
-              <Row>
-                {
-                  projects.map((project, index) => {
-                    return <ProjectCard key={index} {... project}/>;
-                  })
-                }
-              </Row>
-            </Tab.Pane>
-            <Tab.Pane eventKey="second">Lorem
-            </Tab.Pane>
-            <Tab.Pane eventKey="third">Lorem</Tab.Pane>
-          </Tab.Content>
-          </Tab.Container>
             </Col>
           </Row>
-        </Container>
-        {/* <img className="background-image-right" alt='mage' src={colorSharp2}></img> */}
-      </section>
-  )
-}
+        
+    <Tabs activeKey={activeTab} onSelect={handleTabChange} className="nav-pills mb-5 justify-content-center align-items-center" id="projects-tabs">
+      <Tab eventKey="tab1" title="Wordpress">
+      <Row>
+             {
+                   projects.map((project, index) => {
+                     return <ProjectCard key={index} {... project}/>;
+                   })
+                 }
+               </Row>
+      
+        {/* Content for Tab 1 */}
+        <p>Tab 1 Content</p>
+      </Tab>
+      <Tab eventKey="tab2" title="React">
+        {/* Content for Tab 2 */}
+        <p>Tab 2 Content</p>
+      </Tab>
+      <Tab eventKey="tab3" title="PHP">
+        {/* Content for Tab 3 */}
+        <p>Tab 3 Content</p>
+      </Tab>
+    </Tabs>
+          </Container>
+    </section>
+  );
+ };
 
-export default Projects;
+export default TabPane;

@@ -5,7 +5,6 @@ import "react-multi-carousel/lib/styles.css";
 import poster1 from "../assets/img/poster1.jpg";
 import poster2 from "../assets/img/poster2.jpg";
 import poster3 from "../assets/img/poster3.jpg";
-import colorSharp from "../assets/img/color-sharp.jpg";
 
 function Skills  (){
   const responsive = {
@@ -60,7 +59,6 @@ function Skills  (){
           </Col>
         </Row>
       </Container>
-      {/* <img className="background-images-left" alt='mage' src={colorSharp}  /> */}
     </section>
   )
 }

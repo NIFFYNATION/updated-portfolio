@@ -3,8 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { MailchimpForm } from "./MailchimpForm";
 import logo from "../assets/img/logo.png";
 import {FaLinkedin, FaGithub, FaStackOverflow} from 'react-icons/fa';
- 
-
 function Footer () {
   return (
     <footer className="footer">

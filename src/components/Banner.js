@@ -6,9 +6,6 @@ import { TypeAnimation } from 'react-type-animation';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-
-
-
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -75,8 +72,8 @@ export const Banner = () => {
                   />
                 <p>I'm a Nigerian web developer who is passionate about work, with good working experience and always available for your services.  </p>
                 <button onClick={() => console.log('connect')}>Let's Connect <BiRightArrowCircle size={25} /></button>
-             </div>}
-             </TrackVisibility>
+            </div>}
+            </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5} mt={5}>
             <img src={headerImg} alt="Header Img" style={{width: "300px", marginTop: "10em"}}/>
