@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Row, Col} from "react-bootstrap";
+import {Row, Col, Container} from "react-bootstrap";
 import contactImg from "../assets/img/contact.jpg";
 
 
@@ -36,7 +36,7 @@ const Newsletter = () => {
 
   return (
     <>
-    <Row className="newsletter-bx">
+   <Row className="newsletter-bx">
         <Col lg={6} md={6} xl={5}>
         <h3>Get in touch</h3>
         <img src={contactImg} alt="Contact Img" style={{width: "400px", marginTop: "1em", borderRadius: "5px"}}/>
@@ -82,10 +82,6 @@ const Newsletter = () => {
               />
             </div>
 
-            <div>
-              
-
-            </div>
             </div>
             <button type="submit">Submit</button>
 

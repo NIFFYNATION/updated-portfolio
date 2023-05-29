@@ -63,13 +63,15 @@ const TabPane = () => {
         
     <Tabs activeKey={activeTab} onSelect={handleTabChange} className="nav-pills mb-5 justify-content-center align-items-center" id="projects-tabs">
       <Tab eventKey="tab1" title="Wordpress">
-      <Row>
+     <Col className="project-cards">
+     <Row>
              {
                    projects.map((project, index) => {
                      return <ProjectCard key={index} {... project}/>;
                    })
                  }
-               </Row>
+     </Row>
+     </Col>
       
         {/* Content for Tab 1 */}
         <p>Tab 1 Content</p>
