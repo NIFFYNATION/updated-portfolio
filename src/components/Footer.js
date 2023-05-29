@@ -7,7 +7,7 @@ function Footer () {
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-item-center">
+        <Row className="align-item-center mt-5">
           <MailchimpForm/>
           <Col sm={6}>
             <img src={logo} alt="Logo"/>

@@ -35,8 +35,9 @@ const Newsletter = () => {
   };
 
   return (
-    <>
-   <Row className="newsletter-bx">
+  
+ <Container>
+ <Row className="newsletter-bx mt-5">
         <Col lg={6} md={6} xl={5}>
         <h3>Get in touch</h3>
         <img src={contactImg} alt="Contact Img" style={{width: "400px", marginTop: "1em", borderRadius: "5px"}}/>
@@ -89,7 +90,8 @@ const Newsletter = () => {
           </div>
         </Col>
     </Row>
-    </> 
+
+ </Container>
   );
 };
 
