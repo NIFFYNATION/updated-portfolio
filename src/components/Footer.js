@@ -1,12 +1,13 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import {ContactUs, Container, Row, Col } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
 import {FaLinkedin, FaGithub, FaStackOverflow} from 'react-icons/fa';
 function Footer () {
   return (
     <footer className="footer">
+
       <Container>
-        <Row className="align-item-center mt-5">
+        <Row className="align-item-center pt-5">
           <Col sm={6}>
             <img src={logo} alt="Logo"/>
           </Col>

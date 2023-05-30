@@ -61,29 +61,10 @@ const ContactUs = () => {
       );
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // Form validation logic
-  //   if (validateForm()) {
-  //     // Perform form submission logic here
-  //     console.log(formData);
-  //     setFormStatus('success');
-  //     // Reset form fields
-  //     setFormData({ name: '', email: '', message: '' });
-  //   } else {
-  //     setFormStatus('error');
-  //   }
-  // };
-
-  // const validateForm = () => {
-  //   // Perform your form validation checks here
-  //   return formData.name !== '' && formData.email !== '' && formData.message !== '';
-  // };
-
   return (
   
- <Container>
- <Row className="ContactUs-bx mt-5" id={"#get-intouch"}>
+ <Container  id="get-intouch">
+ <Row className="ContactUs-bx mt-5">
         <Col lg={6} md={6} xl={5}>
         <h3>Get in touch</h3>
         <img src={contactImg} alt="Contact Img" style={{width: "400px", marginTop: "1em", marginBottom:"2em", borderRadius: "5px"}}/>
