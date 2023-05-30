@@ -525,7 +525,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before{
 /* Footer*/
 .footer{
   padding: 0 0 50px;
-  background-image: linear-gradient(180deg, rgba(46, 45, 45, 0.65), rgba(0,0,0,.7) ), url("./assets/img/footer-bg.jpg");
+  background-image: linear-gradient(to bottom, rgba(46, 45, 45, 0.70), rgba(0,0,0,.7) ), url("./assets/img/footer-bg.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
