@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { MailchimpForm } from "./MailchimpForm";
 import logo from "../assets/img/logo.png";
 import {FaLinkedin, FaGithub, FaStackOverflow} from 'react-icons/fa';
 function Footer () {
@@ -8,7 +7,6 @@ function Footer () {
     <footer className="footer">
       <Container>
         <Row className="align-item-center mt-5">
-          <MailchimpForm/>
           <Col sm={6}>
             <img src={logo} alt="Logo"/>
           </Col>

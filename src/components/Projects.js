@@ -46,11 +46,11 @@ const TabPane = () => {
     ]
 
   return (
-    <section>
+    <section id="projects">
            <Container>
           <Row>
             <Col>
-              <TrackVisibility className="project">
+              <TrackVisibility className="project" id="projects">
                 {({ isVisible }) => (
                   <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                     <h2>Projects</h2>
@@ -62,7 +62,7 @@ const TabPane = () => {
           </Row>
         
     <Tabs activeKey={activeTab} onSelect={handleTabChange} className="nav-pills mb-5 justify-content-center align-items-center" id="projects-tabs">
-      <Tab eventKey="tab1" title="Wordpress">
+      <Tab eventKey="tab1" title="PHP">
      <Col className="project-cards">
      <Row>
              {
@@ -80,7 +80,7 @@ const TabPane = () => {
         {/* Content for Tab 2 */}
         <p>Tab 2 Content</p>
       </Tab>
-      <Tab eventKey="tab3" title="PHP">
+      <Tab eventKey="tab3" title="Wordpress">
         {/* Content for Tab 3 */}
         <p>Tab 3 Content</p>
       </Tab>

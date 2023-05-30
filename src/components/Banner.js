@@ -71,7 +71,7 @@ export const Banner = () => {
                     style={{ fontSize: '2em', display: 'inline-block' }}
                   />
                 <p>I'm a Nigerian web developer who is passionate about work, with good working experience and always available for your services.  </p>
-                <button onClick={() => console.log('connect')}>Let's Connect <BiRightArrowCircle size={25} /></button>
+               <a href="#get-intouch" > <button>Let's Connect <BiRightArrowCircle size={25} /></button></a>
             </div>}
             </TrackVisibility>
           </Col>

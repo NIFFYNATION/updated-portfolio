@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none!important;
 }
 
 html{
@@ -530,7 +531,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before{
   background-repeat: no-repeat;
 }
 
-.newsletter-bx{
+.ContactUs-bx{
   background: #ffffff;
   border-radius: 55px;
   color: #121212;
@@ -538,7 +539,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before{
   margin-bottom: 80px;
 }
 
-.newsletter-bx h3 {
+.ContactUs-bx h3 {
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2em;
@@ -645,14 +646,14 @@ form button{
     width: fit-content;
     text-align: center;
   }
-  .newsletter-bx{
+  .ContactUs-bx{
     max-width: 100% !important;
     min-width: 20%!important;
    
     margin-left: auto!important;
     margin-right: auto !important;
   }
-  .newsletter-bx img{
+  .ContactUs-bx img{
     max-width: 100% !important;
   }
 }
